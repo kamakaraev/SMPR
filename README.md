@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base href="https://github.com/PavlyukovVladimir/SMPR/blob/master/" ></base>
+  <base href="https://github.com/TkachenkoSergey/SMPR/blob/master/" ></base>
 </head>
 <body>
   
