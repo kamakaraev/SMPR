@@ -26,8 +26,8 @@ kNN <- function(xl, z, k)
   return (class)
 }
 ```
+**Результат работы**
 
-**Результат работа**
 ![knn](https://user-images.githubusercontent.com/43620917/47822651-e94f4a80-dd75-11e8-879f-0825d5ff65d8.png)
 
 
