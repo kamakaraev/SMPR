@@ -1,6 +1,13 @@
-euclideanDistance <- function(u, v){
+iris30 <- iris[sample(c(1:150), 30, replace=FALSE), 3:5]
+xl <- iris30[,1:3]
+
+colors <- c("setosa" = "red", "versicolor" = "green3","virginica" = "blue")
+plot(iris30[, 1:2], pch = 21, bg = colors[iris30$Species],col = colors[iris30$Species])
+
+euclideanDistance <- function(u, v){ 
   return(sqrt(sum((u - v)^2)))
 }
+
 oneNN <- function(xl, z, metricFunction =euclideanDistance){
   
   
@@ -22,20 +29,11 @@ oneNN <- function(xl, z, metricFunction =euclideanDistance){
   return (min_dist_class)
 }
 
-colors <- c("setosa" = "red", "versicolor" = "green3",
-            "virginica" = "blue")
-
-iris30 = iris[sample(c(1:150), 30, replace=FALSE), 3:5]
-
-plot(iris30[, 1:2], pch = 21, bg = colors[iris30$Species],
-     col = colors[iris30$Species])
-xl <- iris30[, 1:3]
-
 points_array = c()
 
 for (ytmp in seq(0, 3, by=0.1)){
-for (xtmp in seq(0, 7, by=0.1)){
-  
+  for (xtmp in seq(0, 7, by=0.1)){
+    
     z <- c(xtmp,ytmp)
     class <- oneNN(xl, z)
     points_array = c(points_array, c(z))
