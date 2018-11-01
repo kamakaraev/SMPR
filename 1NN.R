@@ -29,14 +29,13 @@ oneNN <- function(xl, z, metricFunction =euclideanDistance){
   return (min_dist_class)
 }
 
-points_array = c()
+
 
 for (ytmp in seq(0, 3, by=0.1)){
   for (xtmp in seq(0, 7, by=0.1)){
     
     z <- c(xtmp,ytmp)
     class <- oneNN(xl, z)
-    points_array = c(points_array, c(z))
     points(z[1], z[2], pch = 1, col = colors[class])
   }
 }
