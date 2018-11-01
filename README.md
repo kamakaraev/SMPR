@@ -57,6 +57,9 @@ euclideanDistance <- function(u, v){
   return (min_dist_class)
 }
 ```
+**Задачи классификации 1NN**
+
+![1nn](https://user-images.githubusercontent.com/43620917/47834525-dd34ae80-ddb0-11e8-8137-c4348e4a2d04.png)
   
    
  
