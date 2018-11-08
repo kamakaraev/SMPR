@@ -12,7 +12,7 @@ oneNN <- function(xl, z, metricFunction =euclideanDistance){
   
   
   min_dist = 100
-  min_dist_class = 'setosa'
+ 
   
   l <- dim(xl)[1]
   n <- dim(xl)[2] - 1
