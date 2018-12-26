@@ -1,4 +1,4 @@
-```R
+
 euclideanDistance <- function(u, v)
 {
   sqrt(sum((u - v)^2))
@@ -53,4 +53,4 @@ q <- 0.8
 xl <- iris[, 3:5]
 class <- kwNN(xl, z, k, q)
 points(z[1], z[2], pch = 22, bg = colors[class], asp = 1)
-```
+
