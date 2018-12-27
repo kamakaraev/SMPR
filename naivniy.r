@@ -9,7 +9,7 @@ naive = function(x, Py, mu, sigm, m, n) {
     }
     gen[i,2]=scores[i]
   }
-  class <- gen[,1][which.max(amo[,2])]
+  class <- gen[,1][which.max(gen[,2])]
 }
 
 
