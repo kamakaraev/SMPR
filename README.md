@@ -91,8 +91,8 @@ naive = function(x, Py, mu, sigm, m, n) {
   for (i in 1:m) {
     scores[i] = Py[i]
     for (j in 1:n){
-      N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)
-      scores[i] = scores[i] * N
+      N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)#вычисление плотностей
+      scores[i] = scores[i] * N #ищем для каждого класса
     }
     gen[i,2]=scores[i]
   }
