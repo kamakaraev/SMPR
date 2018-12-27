@@ -4,8 +4,8 @@ naive = function(x, Py, mu, sigm, m, n) {
   for (i in 1:m) {
     scores[i] = Py[i]
     for (j in 1:n){
-      N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)
-      scores[i] = scores[i] * N
+      N=1/sqrt(2*pi)/sigm[i,j]*exp(-1/2*(x[j]-mu[i,j])^2/sigm[i,j]^2)#вычисление плотностей
+      scores[i] = scores[i] * N #ищем для каждого класса
     }
     gen[i,2]=scores[i]
   }
@@ -17,11 +17,11 @@ xl <- iris[, 3:5]
 n=2
 m=3 
 classes <- levels(xl[,3])
-Py<-table(xl[,3])/dim(xl)[1]
+Py<-table(xl[,3])/dim(xl)[1]#априорная вероятность появления классов
 
 
-mu = matrix(0, nrow=m, ncol=n)
-sigm = matrix(0, nrow=m, ncol=n)
+mu = matrix(0, nrow=m, ncol=n)#матрица матиматического ожидания
+sigm = matrix(0, nrow=m, ncol=n)#ковариционная матрица
 for(i in 1:m){
   for(j in 1:n){
     temp=xl[xl[,3]==classes[i],][,j] 
