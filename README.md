@@ -143,7 +143,7 @@ __Adaline__ основан на __методе стохастического г
 
 __Результат работы алгоритмов ADALINE и Логистической регресии:__
 
-
+![adaline and logreg](https://user-images.githubusercontent.com/43620917/51718896-5feba380-2058-11e9-85a1-13e6fe8cf5c4.png)
 
 
 
